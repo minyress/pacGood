@@ -3,10 +3,16 @@ var domains = {
   "googlesyndication.com": 1,
   "dropboxusercontent.com": 1,
   "ytvpn.com": 1,
+  "xda-developers.com": 1,
   "fsdn.com": 1,
+  "washingtonpost.com": 1,
+  "ubuntu.com": 1,
+  "lvv2.com": 1,
   "vistia.net": 1,
   "ookla.com": 1,
   "tiobe.com": 1,
+  "dropboxstatic.com": 1,
+  "dropboxlocalhost.com": 1,
   "gmail.com": 1,
   "stackoverflow.com": 1,
   "namecheap.com": 1,
@@ -240,6 +246,7 @@ var domains = {
   "64wiki.com": 1,
   "666kb.com": 1,
   "6park.com": 1,
+  "6v6dota.com": 1,
   "7capture.com": 1,
   "881903.com": 1,
   "888.com": 1,
@@ -280,11 +287,8 @@ var domains = {
   "anonymizer.com": 1,
   "a-normal-day.com": 1,
   "anthonycalzadilla.com": 1,
-  "aol.com": 1,
-  "aolnews.com": 1,
   "apetube.com": 1,
   "apigee.com": 1,
-  "apple.com": 1,
   "appledaily.com": 1,
   "appspot.com": 1,
   "arctosia.com": 1,
@@ -336,6 +340,7 @@ var domains = {
   "boardreader.com": 1,
   "bobulate.com": 1,
   "bonbonme.com": 1,
+  "bonjourlesgeeks.com": 1,
   "bookshelfporn.com": 1,
   "botanwang.com": 1,
   "boxunblog.com": 1,
@@ -1348,7 +1353,8 @@ function FindProxyForURL(url, host) {
     }
     while (lastPos >= 1);
     //Designed by Dxf
-    if ((-1 != host.lastIndexOf('cn')) || (-1 != host.lastIndexOf('com')) || (-1 != host.lastIndexOf('net')) || (-1 != host.search("[0-9]"))) {
+    if ((-1 != host.lastIndexOf('cn')) || (-1 != host.lastIndexOf('com')) ||
+(-1 != host.lastIndexOf('net'))  || (-1 != host.search("[0-9]"))) {
         return direct;
     }
     return proxy;
