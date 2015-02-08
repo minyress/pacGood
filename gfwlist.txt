@@ -340,7 +340,6 @@ var domains = {
   "boardreader.com": 1,
   "bobulate.com": 1,
   "bonbonme.com": 1,
-  "bonjourlesgeeks.com": 1,
   "bookshelfporn.com": 1,
   "botanwang.com": 1,
   "boxunblog.com": 1,

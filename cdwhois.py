@@ -2,7 +2,7 @@
 import re
 import os
 
-gfile = '/gfwlist.txt'
+gfile = 'gfwlist.txt'
 
 def cwho(domain):
 	cmd = '''dig %s ns |grep "a.gtld-servers.net. nstld.verisign-grs.com." > /dev/null'''%domain
