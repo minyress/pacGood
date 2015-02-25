@@ -22,5 +22,4 @@ def main():
 			cwho(d)
 	f.close()
 
-
 main()
