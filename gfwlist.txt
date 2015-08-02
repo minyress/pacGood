@@ -1035,6 +1035,7 @@ var domains = {
   "skykiwi.com": 1,
   "skype.com": 1,
   "plurk.com": 1,
+  "disquscdn.com": 1,
   "viber.com": 1,
   "slavasoft.com": 1,
   "slheng.com": 1,
