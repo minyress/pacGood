@@ -620,6 +620,8 @@ var domains = {
   "gcpnews.com": 1,
   "geekmanuals.com": 1,
   "genuitec.com": 1,
+  "tumblr.com": 1,
+  "gigya.com": 1,
   "geocities.com": 1,
   "geohot.com": 1,
   "geometrictools.com": 1,
