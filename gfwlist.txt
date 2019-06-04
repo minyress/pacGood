@@ -1,17 +1,72 @@
 var domains = {
   "wp.com": 1,
+  "toyota.com": 1,
+  "shadowroket.com": 1,
   "ustraveldocs.com": 1,
+  "meltoday.com": 1,
+  "podbean.com": 1,
+  "omtrdc.net": 1,
+  "smartdnsproxy.com": 1,
+  "voxox.com": 1,
+  "imponderablethings.com": 1,
   "trvl-media.com": 1,
   "evernote.com": 1,
+  "toshiba.com": 1,
+  "ikea.com": 1,
+  "cdn-apple.com": 1,
+  "azureedge.net": 1,
+  "fix4dll.com": 1,
+  "delta.com": 1,
+  "cdn-images.mailchimp.com": 1,
+  "media-amazon.com": 1,
+  "tigersecurities.net": 1,
+  "liankuaiche.com": 1,
+  "dmcdn.net": 1,
+  "mozilla.net": 1,
+  "media-imdb.com": 1,
+  "rawgit.com": 1,
+  "carscoops.com": 1,
+  "pin-cong.com": 1,
+  "paypalobjects.com": 1,
+  "godoor.net": 1,
+  "stickyadstv.com": 1,
+  "blockchain.com": 1,
+  "withgoogle.com": 1,
+  "uyghurpress.com": 1,
+  "sublimetext.com": 1,
+  "ssllabs.com": 1,
+  "steamcommunity.com": 1,
+  "apkpure.com": 1,
+  "atlassian.com": 1,
+  "coinbase.com": 1,
+  "bitvise.com": 1,
   "optimizely.com": 1,
+  "macstories.net": 1,
+  "cbsi.com": 1,
+  "captora.com": 1,
+  "tdbank.com": 1,
+  "brightcove.com": 1,
+  "jdpower.com": 1,
   "liverail.com": 1,
+  "krxd.net": 1,
+  "rainymood.com": 1,
+  "vultr.com": 1,
   "criteo.com": 1,
+  "marketo.net": 1,
+  "specificmedia.com": 1,
+  "specificclick.net": 1,
+  "statuecruises.com": 1,
   "sojern.com": 1,
+  "zippyshare.com": 1,
+  "freedomvoice.com": 1,
   "rabbitmq.com": 1,
   "blogetcetera.com": 1,
+  "textnow.com": 1,
+  "virtualphoneline.com": 1,
   "esbnyc.com": 1,
   "convertro.com": 1,
   "turn.com": 1,
+  "paypal.com": 1,
   "chineseinla.com": 1,
   "ctnsnet.com": 1,
   "qatarairways.com": 1,
@@ -94,7 +149,6 @@ var domains = {
   "imgdone.com": 1,
   "edigitalsurvey.com": 1,
   "playssh.com": 1,
-  "v2ex.com": 1,
   "amazonwebservices.com": 1,
   "googlesyndication.com": 1,
   "softlayer.com": 1,
@@ -404,7 +458,6 @@ var domains = {
   "apetube.com": 1,
   "apigee.com": 1,
   "appledaily.com": 1,
-  "apple.com": 1,
   "appspot.com": 1,
   "arctosia.com": 1,
   "art-or-porn.com": 1,
@@ -1019,6 +1072,8 @@ var domains = {
   "porn2.com": 1,
   "porn.com": 1,
   "pornhub.com": 1,
+  "dji.com": 1,
+  "cisco.com": 1,
   "pornoxo.com": 1,
   "pornstarclub.com": 1,
   "porntube.com": 1,
@@ -1343,6 +1398,7 @@ var domains = {
   "vpncup.com": 1,
   "vpnfire.com": 1,
   "vpnpop.com": 1,
+  "pinterest.com": 1,
   "vpnpronet.com": 1,
   "vtunnel.com": 1,
   "waffle1999.com": 1,
@@ -1438,6 +1494,7 @@ var domains = {
   "zacebook.com": 1,
   "zaobao.com": 1,
   "zattoo.com": 1,
+  "att.com": 1,
   "zeutch.com": 1,
   "zfreet.com": 1,
   "zhinengluyou.com": 1,
@@ -1459,7 +1516,7 @@ var domains = {
   "rubiconproject.com": 1,
 }
 
-var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT;";
+var proxy = "SOCKS5 127.0.0.1:2080; SOCKS 127.0.0.1:2080; DIRECT;";
 var direct = "DIRECT;";
 
 function FindProxyForURL(url, host) {
@@ -1472,11 +1529,16 @@ function FindProxyForURL(url, host) {
         host = host.slice(lastPos);
     }
     while (lastPos >= 1);
-    //Designed by Dxf
-    if ((-1 != host.lastIndexOf('cn')) || (-1 != host.lastIndexOf('com')) || (-1 != host.lastIndexOf('net')) || (-1 != host.lastIndexOf('tv')) || (-1 != host.search("[0-9]"))) {
+    if (
+        (-1 != host.lastIndexOf('cn')) ||
+        (-1 != host.lastIndexOf('com')) ||
+        (-1 != host.lastIndexOf('net')) ||
+        (-1 != host.lastIndexOf('tv')) ||
+        (-1 != host.lastIndexOf('fm')) ||
+        (-1 != host.search("[0-9]")) ||
+        (-1 != host.lastIndexOf('gs'))
+    ){
         return direct;
     }
     return proxy;
 }
-
-
