@@ -6,6 +6,7 @@ var domains = {
   "meltoday.com": 1,
   "podbean.com": 1,
   "omtrdc.net": 1,
+  "v2ray.com": 1,
   "smartdnsproxy.com": 1,
   "voxox.com": 1,
   "www.interbrand.com": 1,
