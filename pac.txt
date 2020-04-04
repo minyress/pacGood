@@ -1,15 +1,31 @@
+var mainland = {
+  "icourse163.org": 1,
+  "ip138.com": 1,
+  "wanmen.org": 1,
+}
+
 var domains = {
+  "netdna-ssl.com": 1,
+  "steemit.com": 1,
+  "flyzy2005.com": 1,
+  "ttvnw.net": 1,
+  "etfdb.com": 1,
+  "githubassets.com": 1,
   "wp.com": 1,
   "toyota.com": 1,
+  "doubibackup.com": 1,
   "shadowroket.com": 1,
+  "disqus.com": 1,
   "ustraveldocs.com": 1,
   "meltoday.com": 1,
   "podbean.com": 1,
+  "steampowered.com": 1,
   "omtrdc.net": 1,
+  "leetcode.com": 1,
   "v2ray.com": 1,
   "smartdnsproxy.com": 1,
   "voxox.com": 1,
-  "www.interbrand.com": 1,
+  "interbrand.com": 1,
   "reddit.com": 1,
   "popads.net": 1,
   "avg.com": 1,
@@ -29,7 +45,7 @@ var domains = {
   "azureedge.net": 1,
   "fix4dll.com": 1,
   "delta.com": 1,
-  "cdn-images.mailchimp.com": 1,
+  "mailchimp.com": 1,
   "media-amazon.com": 1,
   "tigersecurities.net": 1,
   "liankuaiche.com": 1,
@@ -749,6 +765,7 @@ var domains = {
   "googleapis.com": 1,
   "googlecode.com": 1,
   "google.com": 1,
+  "cactusvpn.com": 1,
   "googledrive.com": 1,
   "googlepages.com": 1,
   "googlevideo.com": 1,
@@ -1474,6 +1491,8 @@ var domains = {
   "rubiconproject.com": 1,
 }
 
+
+
 var proxy = "SOCKS5 127.0.0.1:2080; DIRECT;";
 var direct = "DIRECT;";
 
@@ -1483,6 +1502,9 @@ function FindProxyForURL(url, host) {
         if (domains.hasOwnProperty(host)) {
             return proxy;
         }
+		if (mainland.hasOwnProperty(host)) {
+            return direct;
+        }
         lastPos = host.indexOf('.') + 1;
         host = host.slice(lastPos);
     }
@@ -1491,7 +1513,6 @@ function FindProxyForURL(url, host) {
         (-1 != host.lastIndexOf('cn')) ||
         (-1 != host.lastIndexOf('com')) ||
         (-1 != host.lastIndexOf('net')) ||
-        (-1 != host.lastIndexOf('tv')) ||
         (-1 != host.lastIndexOf('fm')) ||
         (-1 != host.search("[0-9]")) ||
         (-1 != host.lastIndexOf('gs'))
