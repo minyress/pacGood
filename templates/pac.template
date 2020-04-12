@@ -1494,7 +1494,7 @@ var domains = {
 
 
 
-var proxy = "SOCKS5 127.0.0.1:2080; DIRECT;";
+var proxy = "SOCKS5 {{ host }}:{{ port }}; DIRECT;";
 var direct = "DIRECT;";
 
 function FindProxyForURL(url, host) {
