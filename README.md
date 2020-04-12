@@ -1,4 +1,4 @@
-# 背景
+# 好用的PAC列表
 gfwlist不好用，我基于网络上的列表修改了一个适用自己的规则。
 # 地址
 [固定地址](https://raw.githubusercontent.com/WillGhost/pacGood/master/pac.txt) 因与Tor端口冲突，端口我改成了2080
